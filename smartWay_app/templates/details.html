@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+    {% block title %}<h1> {{ mystudent.firstname }} {{ mystudent.lastname }} </h1> {% endblock %}
+
+
+    {% block content %}
+    <h1>{{ mystudent.firstname }}{{ mystudent.lastname }}</h1>
+    <table border=1>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Phone</th>
+        <th>Joining from</th>
+        <th>Last Fee Paid on</th>
+      </tr>
+      <tr>
+        <td>{{ mystudent.firstname }}</td>
+        <td>{{ mystudent.clas }}</td>
+        <td>{{ mystudent.phone }}</td>
+        <td>{{ mystudent.joining_date }}</td>
+        <td>{{ mystudent.FeeSubmitDate }}</td>
+      </tr>
+
+   </table>
+    <!-- <p><strong>class:</strong> {{ mystudent.clas }} </p>
+    <p><strong>Phone:</strong> {{ mystudent.phone }}</p>
+    <p><strong>Joining From:</strong> {{ mystudent.joining_date }}</p>
+    <p><strong>Last Fee paid on :</strong> {{ mystudent.FeeSubmitDate }}</p>
+    <p> <strong>Fee Amt. :</strong> {{ mystudent.Fee }}</p> -->
+
+    <p>Back to <a href="/students">Students</a>
+    </p>
+    {% endblock %}
